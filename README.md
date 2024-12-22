@@ -11,7 +11,7 @@ Welcome to my GitHub profile! My journey spans developing games in Unity, buildi
 - 🎓 **Currently Studying**: Machine Learning and AI.
 - 💻 **Experience**:
   - Built immersive games using **Unity** and **C#**.
-  - Developed mobile apps with **Android Studio ** and **Flutter (Dart)**.
+  - Developed mobile apps with **Android Studio** and **Flutter (Dart)**.
   - Created robust back-end solutions using **Java**.
 - 🌍 **Location**: Tashkent,Uzbekistan
 - 🌱 **Hobbies**: Gaming,Table tennis.
