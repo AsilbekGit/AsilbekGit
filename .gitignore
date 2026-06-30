@@ -4,7 +4,5 @@
 # Claude Code local settings
 .claude/
 
-# Source files — not part of the published site
-one page.pdf
-resume_2_page.pdf
+
 assets/IMG_0023.heic
