@@ -316,32 +316,35 @@ h3 {
 .research-section {
   border-top: 1px solid var(--line);
 }
-.research-row {
+.project-grid {
   display: grid;
-  grid-template-columns: 300px minmax(0, 1fr);
-  gap: 34px;
-  align-items: center;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  align-items: stretch;
 }
 .research-feature {
-  display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
-  align-items: start;
-  gap: 30px;
-  padding-left: 24px;
-  border-left: 2px solid #d4c4e1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: var(--bg);
+  border: 1px solid #f3eff6;
+  box-shadow: 0 7px 18px #2b26330b;
 }
 .research-feature .research-copy {
   min-width: 0;
+  padding: 15px 16px 18px;
+}
+.research-media {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+  padding: 16px 16px 0;
 }
 .research-video {
-  align-self: center;
-  justify-self: end;
   width: 100%;
-  max-width: 480px;
   min-width: 0;
 }
 .research-diagram {
-  grid-column: 1 / -1;
   min-width: 0;
 }
 .research-video video,
@@ -349,71 +352,55 @@ h3 {
   display: block;
   width: 100%;
   height: auto;
-  border: 1px solid var(--line);
   background: var(--lavender);
 }
 .research-video video {
-  aspect-ratio: 1;
+  aspect-ratio: 16 / 9;
   object-fit: contain;
-  background: #171923;
+  background: #f5f1f9;
 }
-.research-video figcaption,
-.research-diagram figcaption {
-  margin-top: 12px;
-  font-size: 12px;
+.research-video figcaption {
+  margin-top: 6px;
+  font-size: 10px;
   color: var(--muted);
-}
-.research-video figcaption strong,
-.research-diagram figcaption strong {
-  display: block;
-  color: var(--ink);
-  font-size: 13px;
-  font-weight: 550;
-  margin-bottom: 3px;
-}
-.video-details {
-  display: block;
-  margin-top: 3px;
-  color: var(--faint);
-  font-size: 11px;
 }
 .research-diagram > a {
   display: block;
   cursor: zoom-in;
 }
-.research-diagram figcaption {
+.project-meta {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 10px 28px;
+  gap: 6px 12px;
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 10px;
 }
-.research-diagram figcaption > div {
-  max-width: 750px;
+.project-tags {
+  display: flex;
+  gap: 9px;
+  color: var(--purple);
 }
-.research-diagram figcaption > a {
-  color: var(--purple-dark);
-  text-decoration: underline;
-  text-decoration-color: #d9cce4;
-  text-underline-offset: 3px;
-  white-space: nowrap;
+.project-tags span::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  margin-right: 4px;
+  vertical-align: middle;
+  background: currentColor;
 }
-.research-image,
-.publication-image {
-  display: block;
-  overflow: hidden;
-  background: var(--lavender);
-  border: 1px solid #eee8f4;
+.project-tags span:last-child {
+  color: var(--warm);
 }
-.research-image img,
-.publication-image img {
-  width: 100%;
-  height: auto;
-  transition: transform 0.65s var(--ease);
-}
-.research-image:hover img,
-.publication-image:hover img {
-  transform: scale(1.025);
+.research-copy h3 {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.015em;
 }
 .item-kicker {
   font-size: 11px;
@@ -453,14 +440,24 @@ h3 {
   }
 }
 .research-copy > p:not(.item-kicker) {
-  font-size: 15px;
+  font-size: 13px;
   color: var(--muted);
-  margin-top: 11px;
+  margin-top: 9px;
   line-height: 1.65;
 }
 .research-copy .research-affiliation {
-  font-size: 12px !important;
+  font-size: 11px !important;
   margin-top: 9px !important;
+}
+.research-copy .resource-links a {
+  background: var(--lavender);
+  border-color: transparent;
+  border-radius: 0;
+  font-size: 10px;
+  padding: 4px 8px;
+}
+.research-copy .resource-links a:hover {
+  background: #e9ddf4;
 }
 .resource-links {
   display: flex;
@@ -489,10 +486,7 @@ h3 {
   border-color: var(--purple);
 }
 .publication-row {
-  display: grid;
-  grid-template-columns: 300px minmax(0, 1fr);
-  align-items: center;
-  gap: 34px;
+  max-width: 920px;
 }
 .publication-copy h3 {
   font-size: 19px;
@@ -515,12 +509,6 @@ h3 {
   margin-top: 7px;
   line-height: 1.65;
   max-width: 780px;
-}
-.illustration-note {
-  color: var(--faint);
-  font-size: 10px;
-  letter-spacing: 0.015em;
-  margin-top: 22px;
 }
 .journey {
   border-top: 1px solid var(--line);
@@ -615,9 +603,7 @@ h3 {
   font-weight: 400;
 }
 .community-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 32px;
+  max-width: 780px;
   margin-top: 15px;
   color: var(--muted);
   font-size: 14px;
@@ -746,27 +732,11 @@ h3 {
   .intro-copy {
     font-size: 15px;
   }
-  .research-row {
-    grid-template-columns: 260px minmax(0, 1fr);
-    gap: 26px;
-  }
-  .publication-row {
-    grid-template-columns: 260px minmax(0, 1fr);
-    gap: 26px;
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 @media (max-width: 799px) {
-  .research-feature,
-  .community-grid {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-  .research-feature {
-    padding-left: 18px;
-  }
-  .research-video {
-    justify-self: start;
-  }
   html {
     scroll-padding-top: 86px;
   }
@@ -883,20 +853,6 @@ h3 {
   .section-heading {
     margin-bottom: 23px;
   }
-  .research-row {
-    grid-template-columns: 210px minmax(0, 1fr);
-    gap: 25px;
-  }
-  .research-copy h3 {
-    font-size: 19px;
-  }
-  .research-copy > p:not(.item-kicker) {
-    font-size: 14px;
-  }
-  .publication-row {
-    grid-template-columns: 210px minmax(0, 1fr);
-    gap: 25px;
-  }
   .publication-copy h3 {
     font-size: 17px;
   }
@@ -921,6 +877,9 @@ h3 {
   }
 }
 @media (max-width: 580px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
   .introduction {
     grid-template-columns: 1fr;
     grid-template-areas: "heading" "photo" "bio" "interests";
@@ -987,23 +946,6 @@ h3 {
     padding-block: 28px;
   }
   .section-heading > p {
-    font-size: 14px;
-  }
-  .research-row,
-  .publication-row {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  .research-image {
-    max-width: 360px;
-  }
-  .publication-image {
-    max-width: 236px;
-  }
-  .research-copy h3 {
-    font-size: 20px;
-  }
-  .research-copy > p:not(.item-kicker) {
     font-size: 14px;
   }
   .publication-copy h3 {
@@ -1133,7 +1075,7 @@ h3 {
     opacity: 1 !important;
     transform: none !important;
   }
-  .research-row,
+  .research-feature,
   .publication-row,
   .experience-list li {
     break-inside: avoid;
