@@ -3,9 +3,6 @@
 
   const initialize = () => {
     const root = document.documentElement;
-    // Clear the previous design's theme attribute on a restored page.
-    root.removeAttribute("data-theme");
-
     const reducedMotionQuery =
       typeof window.matchMedia === "function"
         ? window.matchMedia("(prefers-reduced-motion: reduce)")

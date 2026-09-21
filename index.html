@@ -37,6 +37,7 @@
       type="font/woff2"
       crossorigin
     />
+    <script src="assets/js/theme.js"></script>
     <link rel="stylesheet" href="assets/css/styles.css" />
     <script src="assets/js/main.js" defer></script>
   </head>
@@ -65,6 +66,41 @@
             ><span class="sr-only"> (full PDF, opens in a new tab)</span></a
           >
         </nav>
+        <button
+          class="theme-toggle"
+          type="button"
+          data-theme-toggle
+          aria-label="Switch to dark theme"
+          title="Switch to dark theme"
+        >
+          <svg
+            class="theme-sun"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"
+            />
+          </svg>
+          <svg
+            class="theme-moon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M20.5 13A8.5 8.5 0 0 1 11 3.5 8.5 8.5 0 1 0 20.5 13Z" />
+          </svg>
+          <span data-theme-label>Light</span>
+        </button>
       </div>
     </header>
 
@@ -88,7 +124,7 @@
                   />
                   <path
                     d="m4 7 8 6 8-6"
-                    stroke="white"
+                    stroke="var(--bg)"
                     stroke-width="1.4"
                     stroke-linejoin="round"
                   /></svg
