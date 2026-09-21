@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="460" viewBox="0 0 840 460" fill="none">
+  <defs>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#aa99bc" opacity=".2"/></pattern>
+    <linearGradient id="land" x1="411" y1="104" x2="422" y2="373" gradientUnits="userSpaceOnUse"><stop stop-color="#ded4ea" stop-opacity=".12"/><stop offset="1" stop-color="#aa99bc" stop-opacity=".24"/></linearGradient>
+    <linearGradient id="car" x1="-37" y1="-10" x2="37" y2="10" gradientUnits="userSpaceOnUse"><stop stop-color="#5c4779"/><stop offset="1" stop-color="#aa99bc"/></linearGradient>
+    <filter id="shadow" x="-40%" y="-60%" width="180%" height="220%"><feDropShadow dx="0" dy="8" stdDeviation="7" flood-color="#5c4779" flood-opacity=".13"/></filter>
+  </defs>
+  <rect width="840" height="460" fill="#faf8fc"/>
+  <rect x="40" y="32" width="760" height="396" fill="url(#dots)"/>
+  <path d="M68 286 353 91 773 231 487 419Z" fill="url(#land)"/>
+  <g stroke="#5c4779" stroke-width="1" opacity=".17">
+    <path d="M68 286 353 91 773 231 487 419Z"/><path d="m139 237 419 141M211 189 629 331M282 140 702 281"/>
+    <path d="m152 313 285-194M236 341 285-194M320 369 285-194M403 397 286-194"/>
+  </g>
+  <g stroke="#aa99bc" stroke-width="1.2" opacity=".68">
+    <path d="M81 198c56-69 94-18 141-58s75-65 120-40"/><path d="M84 211c64-69 97-13 147-56s72-64 119-39"/>
+    <path d="M93 222c64-64 102-9 151-51s68-61 115-39"/>
+    <path d="M606 253c25-29 77-27 113 8s66 24 87 13"/><path d="M591 264c34-30 84-21 117 10s73 23 97 12"/>
+    <path d="M580 278c36-31 87-19 120 10s77 22 105 11"/>
+  </g>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M110 315 295 197Q338 169 384 186L505 230Q548 246 585 219L730 119" stroke="#aa99bc" stroke-width="21" opacity=".42"/>
+    <path d="M110 315 295 197Q338 169 384 186L505 230Q548 246 585 219L730 119" stroke="#5c4779" stroke-width="15" stroke-dasharray="2 10" opacity=".43"/>
+    <path d="M110 310 295 192Q338 164 384 181L505 225Q548 241 585 214L730 114" stroke="#5c4779" stroke-width="1.8"/>
+    <path d="M110 320 295 202Q338 174 384 191L505 235Q548 251 585 224L730 124" stroke="#5c4779" stroke-width="1.8"/>
+    <path d="M110 315 295 197Q338 169 384 186L505 230Q548 246 585 219L730 119" stroke="#faf8fc" stroke-width="5"/>
+  </g>
+  <g fill="#faf8fc" stroke="#5c4779" stroke-width="2">
+    <circle cx="133" cy="300" r="9"/><circle cx="340" cy="180" r="9"/><circle cx="552" cy="235" r="9"/><circle cx="708" cy="134" r="9"/>
+  </g>
+  <g fill="#5c4779"><circle cx="133" cy="300" r="3"/><circle cx="340" cy="180" r="3"/><circle cx="552" cy="235" r="3"/><circle cx="708" cy="134" r="3"/></g>
+  <g transform="translate(436 205) rotate(20)" filter="url(#shadow)">
+    <rect x="-55" y="-12" width="65" height="23" rx="7" fill="#5c4779"/>
+    <path d="M-46-17H33c14 0 23 9 25 23H-47a7 7 0 0 1-7-7v-8a8 8 0 0 1 8-8Z" fill="url(#car)" stroke="#5c4779" stroke-width="1.5"/>
+    <path d="M30-12c9 0 15 5 19 13H28v-13Z" fill="#faf8fc"/>
+    <path d="M-43-11h13v9h-13zM-24-11h13v9h-13zM-5-11H8v9H-5z" fill="#faf8fc"/>
+    <path d="M-48 2h69" stroke="#b8856c" stroke-width="2.5"/>
+    <path d="M17-15v19" stroke="#5c4779" stroke-opacity=".35"/>
+  </g>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="9" letter-spacing="1.8" fill="#5c4779">
+    <text x="91" y="93">SIMULATION</text><text x="409" y="129">POLICY</text><text x="588" y="331">TRAJECTORY</text>
+  </g>
+  <path d="M437 139v23" stroke="#5c4779" stroke-opacity=".28"/>
+  <circle cx="437" cy="165" r="2" fill="#b8856c"/>
+  <g transform="translate(584 348)">
+    <path d="M0 0v44h170M0 22h170" stroke="#5c4779" stroke-opacity=".17"/>
+    <path d="M0 39c14-1 15-27 35-27s31 8 53 7 36-20 52-15 21 24 30 35" stroke="#aa99bc" stroke-width="1.5" stroke-dasharray="3 4"/>
+    <path d="M0 39c20-2 19-31 43-31s31 9 54 9 26-14 42-10 22 24 31 32" stroke="#5c4779" stroke-width="2"/>
+    <circle cx="97" cy="17" r="4" fill="#b8856c" stroke="#faf8fc" stroke-width="2"/>
+  </g>
+  <g fill="#5c4779" opacity=".65"><path d="M186 111v8m-4-4h8M752 362v8m-4-4h8" stroke="#5c4779" stroke-width="1"/></g>
+  <circle cx="269" cy="299" r="27" fill="#ded4ea" opacity=".38"/><circle cx="284" cy="323" r="18" fill="#aa99bc" opacity=".36"/>
+</svg>
